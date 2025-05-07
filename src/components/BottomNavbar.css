@@ -1,0 +1,27 @@
+.bottom-navbar {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.navbar-item {
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+  flex: 1;
+}
+
+.navbar-item.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.navbar-item:hover {
+  color: #007bff;
+} 
