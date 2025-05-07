@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "start": "next start"
   },
   "dependencies": {
     "@ar-dacity/ardacity-aurora": "^1.0.2",
