@@ -1710,6 +1710,9 @@ const PropertiesPanel: React.FC<{
             Code Preview
           </h4>
           <div className="relative rounded-lg overflow-hidden">
+          <SyntaxHighlighter language="jsx" style={atomDark} className="text-sm">
+              {getFullComponentCode(component)}
+            </SyntaxHighlighter>
             
             <button
               onClick={() => {

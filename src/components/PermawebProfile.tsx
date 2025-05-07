@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { usePermawebProvider } from '../providers/PermawebProvider';
 import { connectWallet, disconnectWallet, getWalletAddress } from './arweaveUtils';
-import isWalletConnected from './arweaveUtils';
+// import isWalletConnected from './arweaveUtils';
 import LuaIDE from './LuaIDE'; // Import the LuaIDE component
 
 // Default Lua code for profile handler
@@ -121,29 +121,29 @@ export const PermawebProfile: React.FC<ProfileProps> = ({
   }, [providerConnected]);
 
   // Check for wallet on component mount
-  useEffect(() => {
-    const checkWalletStatus = async () => {
-      console.log("Checking wallet status on component mount...");
-      const connected = await isWalletConnected();
-      console.log("Wallet connected status from utility:", connected);
+  // useEffect(() => {
+  //   const checkWalletStatus = async () => {
+  //     console.log("Checking wallet status on component mount...");
+  //     // const connected = await isWalletConnected();
+  //     console.log("Wallet connected status from utility:", connected);
       
-      if (connected) {
-        try {
-          const address = await getWalletAddress();
-          setWalletAddress(address);
-          setIsConnected(true);
-          console.log("Wallet detected and connected, address:", address);
-        } catch (error) {
-          console.error("Error getting wallet address:", error);
-        }
-      } else {
-        setIsConnected(false);
-        console.log("Wallet not connected");
-      }
-    };
+  //     if (connected) {
+  //       try {
+  //         const address = await getWalletAddress();
+  //         setWalletAddress(address);
+  //         setIsConnected(true);
+  //         console.log("Wallet detected and connected, address:", address);
+  //       } catch (error) {
+  //         console.error("Error getting wallet address:", error);
+  //       }
+  //     } else {
+  //       setIsConnected(false);
+  //       console.log("Wallet not connected");
+  //     }
+  //   };
 
-    checkWalletStatus();
-  }, []);
+  //   checkWalletStatus();
+  // }, []);
 
   // Handle wallet connection
   const handleConnectWallet = async () => {
